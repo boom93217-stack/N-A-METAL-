@@ -7,7 +7,8 @@ import { Facebook, Instagram, Menu, X } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { useState } from "react";
 
-const LOGO = "/images/logo.webp";
+const LOGO_MARK = "/images/logo-mark.webp";
+const LOGO_WORD = "/images/logo-wordmark.webp";
 
 const navigation = [
   { label: "Home", href: "/" },
@@ -17,11 +18,14 @@ const navigation = [
   { label: "Contact", href: "/contact" },
 ];
 
-function BrandMark({ inverted = false, footer = false }: { inverted?: boolean; footer?: boolean }) {
+function BrandMark({ inverted = false, footer = false, tagline = false }: { inverted?: boolean; footer?: boolean; tagline?: boolean }) {
   return (
     <Link href="/" className={`brand-mark ${inverted ? "brand-mark--inverted" : ""} ${footer ? "brand-mark--footer" : ""}`} aria-label="N A METAL home">
-      <img src={LOGO} alt="N A METAL — We Build What You Imagine" />
-      {footer && <span className="brand-mark__tagline" aria-hidden="true">WE BUILD WHAT YOU IMAGINE</span>}
+      <span className="brand-mark__lockup">
+        <img className="brand-mark__icon" src={LOGO_MARK} alt="" aria-hidden="true" />
+        <img className="brand-mark__word" src={LOGO_WORD} alt="N A METAL" />
+      </span>
+      {tagline && <span className="brand-mark__tagline" aria-hidden="true">WE BUILD WHAT YOU IMAGINE</span>}
     </Link>
   );
 }
@@ -33,7 +37,7 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="header-inner">
-        <BrandMark inverted />
+        <BrandMark inverted tagline={location === "/"} />
         <nav className="desktop-nav" aria-label="Primary navigation">
           {navigation.map((item) => (
             <Link key={item.href} href={item.href} className={location === item.href ? "is-active" : ""}>
@@ -77,7 +81,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="shell footer-grid">
         <div className="footer-brand">
-          <BrandMark inverted footer />
+          <BrandMark inverted footer tagline />
           <p>N A METAL delivers metal fabrication, event structures, display environments, and custom installations with practical craft and clear project focus.</p>
           <div className="social-links">
             <a href="https://www.facebook.com/p/Metal-Art-Dxb-100086534535300/" target="_blank" rel="noreferrer" aria-label="Facebook"><Facebook size={18} /></a>

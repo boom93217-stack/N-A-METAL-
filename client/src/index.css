@@ -287,12 +287,20 @@ img { display:block; max-width:100%; }
 .home-hero { background:#0b0d10; }.home-hero__media { position:absolute; inset:0; z-index:0; display:block; }.home-hero__media img { display:block; width:100%; height:100%; object-fit:cover; object-position:center; }.home-hero__shade { z-index:1; }.home-hero__content { z-index:2; }.home-hero .gold-slice { z-index:3; }
 @media (prefers-reduced-motion:reduce) { .home-hero__content,.home-hero__content .eyebrow,.home-hero__content h1,.home-hero__content>p:not(.eyebrow),.page-hero__content *,.section-heading *,.gallery-heading *,.service-intro *,.home-statement *,.general-enquiry-card * { animation:none !important; transition:none !important; } }
 
-/* Clean N A METAL logo: no card, no white background, and no border on dark site surfaces. */
-.brand-mark { position:relative; padding:0; overflow:visible; background:transparent; border:0; border-radius:0; box-shadow:none; }
+/* Premium N A METAL logo lockup: true alpha-matted mark + wordmark, natural metal finish, no card/box, seamless on dark surfaces. */
+.header-inner { min-height:108px; }
+.brand-mark { position:relative; display:inline-flex; flex-direction:column; align-items:flex-start; gap:7px; padding:0; overflow:visible; background:transparent; border:0; border-radius:0; box-shadow:none; }
 .brand-mark::after { content:none; }
-.brand-mark img { display:block; width:112px; height:84px; object-fit:contain; object-position:center; mix-blend-mode:screen; filter:invert(1) grayscale(.9) sepia(.24) saturate(1.5) brightness(1.38) contrast(1.22) drop-shadow(0 5px 13px rgba(0,0,0,.48)); }
-.footer-brand .brand-mark { align-items:flex-start; margin-top:0; }.footer-brand .brand-mark--footer { display:flex; flex-direction:column; gap:8px; }.footer-brand .brand-mark img { width:196px; height:147px; }.brand-mark__tagline { display:block; max-width:218px; color:#f1d08d; font-family:"Space Grotesk",sans-serif; font-size:10px; font-weight:700; letter-spacing:.16em; line-height:1.35; text-shadow:0 1px 8px rgba(0,0,0,.46); }
-@media (max-width:620px) { .brand-mark { padding:0; }.brand-mark img { width:94px; height:70px; }.footer-brand .brand-mark img { width:164px; height:123px; }.brand-mark__tagline { max-width:178px; font-size:8px; letter-spacing:.14em; } }
+.brand-mark__lockup { display:inline-flex; align-items:center; gap:13px; }
+.brand-mark img.brand-mark__icon,.brand-mark img.brand-mark__word { display:block; width:auto; object-fit:contain; object-position:left center; filter:drop-shadow(0 6px 14px rgba(0,0,0,.4)); }
+.brand-mark img.brand-mark__icon { height:52px; }
+.brand-mark img.brand-mark__word { height:27px; }
+.brand-mark__tagline { display:block; max-width:280px; color:#f1d08d; font-family:"Space Grotesk",sans-serif; font-size:10px; font-weight:700; letter-spacing:.15em; line-height:1.35; text-shadow:0 1px 8px rgba(0,0,0,.46); }
+.footer-brand .brand-mark { align-items:flex-start; margin-top:0; gap:10px; }
+.footer-brand .brand-mark img.brand-mark__icon { height:66px; }
+.footer-brand .brand-mark img.brand-mark__word { height:34px; }
+.footer-brand .brand-mark__tagline { max-width:260px; }
+@media (max-width:620px) { .header-inner { min-height:82px; }.brand-mark { gap:5px; }.brand-mark img.brand-mark__icon { height:40px; }.brand-mark img.brand-mark__word { height:21px; }.brand-mark__tagline { max-width:220px; font-size:8px; letter-spacing:.13em; }.footer-brand .brand-mark img.brand-mark__icon { height:52px; }.footer-brand .brand-mark img.brand-mark__word { height:27px; }.footer-brand .brand-mark__tagline { max-width:230px; } }
 
 /* Route motion: entrance-only animation keeps navigation immediate and never delays rendering. */
 .route-transition { isolation:isolate; }
