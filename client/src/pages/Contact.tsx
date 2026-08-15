@@ -31,7 +31,7 @@ export default function Contact() {
 
   return (
     <SiteLayout>
-      <PageHero eyebrow="REQUEST A QUOTE" title="Let’s make your next build real." />
+      <PageHero eyebrow="REQUEST A QUOTE" title="Let’s make your next build real." variant="contact" />
       <section className="general-enquiry-section"><div className="shell general-enquiry-layout"><aside className="contact-image-panel"><img src={contactVisual} alt="Dubai steel colonnade with an elegant bronze canopy" /><div><p className="eyebrow eyebrow--light">N A METAL</p><span>Metal · Event · Exhibition</span></div></aside><div ref={formCardRef} className={`general-enquiry-card form-scroll-reveal${isFormVisible ? " is-revealed" : ""}`}><ContactForm /></div></div></section>
     </SiteLayout>
   );

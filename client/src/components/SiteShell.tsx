@@ -62,7 +62,7 @@ export function SiteHeader() {
   );
 }
 
-export function PageHero({ eyebrow, title, children, variant }: { eyebrow: string; title: string; children?: React.ReactNode; variant?: "about" }) {
+export function PageHero({ eyebrow, title, children, variant }: { eyebrow: string; title: string; children?: React.ReactNode; variant?: "about" | "contact" }) {
   return (
     <section className={`page-hero${variant ? ` page-hero--${variant}` : ""}`}>
       <div className="page-hero__backdrop" />
