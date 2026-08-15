@@ -71,7 +71,6 @@ export function PageHero({ eyebrow, title, children, variant }: { eyebrow: strin
         <h1>{title}</h1>
         {children}
       </div>
-      <div className="gold-slice gold-slice--bottom" />
     </section>
   );
 }

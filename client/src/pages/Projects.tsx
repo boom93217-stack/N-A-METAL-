@@ -34,7 +34,6 @@ export default function Projects() {
             <figure className="projects-hero__backdrop"><img src={projectHeroVisuals.backdrop} alt="Custom exhibition installation with black and gold metal detailing" /><figcaption>Exhibition installations</figcaption></figure>
           </div>
         </div>
-        <div className="gold-slice gold-slice--bottom" />
       </section>
       <section className="shell gallery-section gallery-section--projects">
         <div className="gallery-heading"><div><p className="eyebrow">SELECTED WORK</p><h2>Made with purpose.</h2></div><p>Your published N A METAL projects will appear here as you add them through the project manager.</p></div>
