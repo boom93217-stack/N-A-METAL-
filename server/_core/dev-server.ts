@@ -30,6 +30,7 @@ async function startServer() {
   );
 
   const vite = await createViteServer({
+    configFile: path.resolve(repoRoot, "vite.config.ts"),
     root: path.resolve(repoRoot, "client"),
     server: { middlewareMode: true, hmr: { server: httpServer } },
   });

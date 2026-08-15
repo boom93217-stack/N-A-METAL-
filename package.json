@@ -4,7 +4,7 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "dev": "NODE_ENV=development tsx watch server/_core/dev-server.ts",
+    "dev": "cross-env NODE_ENV=development tsx watch server/_core/dev-server.ts",
     "build": "vite build",
     "check": "tsc --noEmit",
     "format": "prettier --write .",
@@ -86,6 +86,7 @@
     "@types/react-dom": "^19.2.1",
     "@vitejs/plugin-react": "^5.0.4",
     "autoprefixer": "^10.4.20",
+    "cross-env": "^10.1.0",
     "drizzle-kit": "^0.31.4",
     "esbuild": "^0.25.0",
     "postcss": "^8.4.47",
