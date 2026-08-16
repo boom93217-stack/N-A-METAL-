@@ -103,7 +103,7 @@ export function SiteFooter() {
 }
 
 function FloatingWhatsApp() {
-  return <a href="https://api.whatsapp.com/send?phone=+971582318648" target="_blank" rel="noreferrer" className="whatsapp-float" aria-label="Start a WhatsApp conversation"><FaWhatsapp className="whatsapp-brand-mark" aria-hidden="true" /></a>;
+  return <a href="https://api.whatsapp.com/send?phone=923176186439" target="_blank" rel="noreferrer" className="whatsapp-float" aria-label="Start a WhatsApp conversation"><FaWhatsapp className="whatsapp-brand-mark" aria-hidden="true" /></a>;
 }
 
 export function SiteLayout({ children }: { children: React.ReactNode }) {
