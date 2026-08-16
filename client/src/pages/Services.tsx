@@ -14,7 +14,7 @@ const serviceItems = [
   ["04", "Brand Activations", "Branded environments and interactive physical moments made to earn attention in high-footfall spaces.", Lightbulb],
   ["05", "Stages & Backdrops", "Stages, scenic backdrops, and supporting structures with strong material presence and considered detailing.", Wrench],
   ["06", "Retail & Mall Displays", "Retail displays, mall activations, and seasonal installations designed to be noticed and navigated.", Frame],
-  ["07", "Interior & Architectural Fit-Outs", "Fabrication-led interior and architectural fit-outs that balance visual character with everyday performance.", Boxes],
+  ["07", "Event Environments", "Fabricated event environments, entry features, and guest-facing structures shaped around audience flow, atmosphere, and the brief.", Boxes],
   ["08", "Custom Props & Installation", "One-off props, display pieces, and large-format installations tailored to the exact brief and space.", Workflow],
 ] as const;
 
