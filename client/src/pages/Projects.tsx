@@ -29,7 +29,7 @@ export default function Projects() {
             <p>Event environments, entry structures, and exhibition installations created with practical fabrication detail.</p>
           </div>
           <div className="projects-hero__collage" aria-label="Selected event fabrication projects">
-            <figure className="projects-hero__stage"><img src={projectHeroVisuals.stage} alt="Illuminated outdoor metal installation in a Dubai event environment" fetchPriority="high" loading="eager" decoding="async" /><figcaption>Event environments</figcaption></figure>
+            <figure className="projects-hero__stage"><img src={projectHeroVisuals.stage} alt="Illuminated sculptural entry installation in a Dubai event environment" fetchPriority="high" loading="eager" decoding="async" /><figcaption>Sculptural entry installation</figcaption></figure>
             <figure className="projects-hero__arch"><img src={projectHeroVisuals.arch} alt="Gold fabricated event entry structure" loading="eager" decoding="async" /><figcaption>Entry structures</figcaption></figure>
             <figure className="projects-hero__backdrop"><img src={projectHeroVisuals.backdrop} alt="Custom exhibition installation with black and gold metal detailing" loading="eager" decoding="async" /><figcaption>Exhibition installations</figcaption></figure>
           </div>
