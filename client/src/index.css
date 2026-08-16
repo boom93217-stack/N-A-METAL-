@@ -230,28 +230,20 @@ img { display:block; max-width:100%; }
 .text-button:hover { transform:translateX(4px); }.text-button:hover svg { transform:translateX(3px); }.text-button svg { transition:transform 180ms var(--ease-out); }
 .service-row:hover h3 { color:var(--gold); transform:translateX(5px); }.service-row:hover .service-row__arrow { transform:translate(3px,-3px); }.footer-nav a:hover { transform:translateX(4px); color:var(--gold-soft); }
 @media (prefers-reduced-motion: no-preference) {
-  .home-hero__content .eyebrow,
-  .page-hero__content .eyebrow,
   .section-heading .eyebrow,
   .gallery-heading .eyebrow,
   .service-intro .eyebrow,
   .home-statement .eyebrow,
   .general-enquiry-card .form-kicker { animation:na-copy-reveal 360ms var(--ease-out) both; }
-  .home-hero__content h1,
-  .page-hero__content h1,
   .section-heading h2,
   .gallery-heading h2,
   .service-intro h2,
   .home-statement h2,
   .general-enquiry-card h2 { animation:na-copy-reveal 520ms var(--ease-out) 60ms both; }
-  .home-hero__content>p:not(.eyebrow),
-  .page-hero__content>p:not(.eyebrow),
   .section-heading>p:not(.eyebrow),
   .gallery-heading>p:not(.eyebrow),
   .service-intro__copy>p:not(.eyebrow),
   .home-statement p:not(.eyebrow) { animation:na-copy-reveal 460ms var(--ease-out) 135ms both; }
-  .home-hero__content .button,
-  .page-hero__content .button,
   .home-statement .text-button,
   .general-enquiry-card .form-submit { animation:na-copy-reveal 420ms var(--ease-out) 195ms both; }
   .service-lines a { animation:na-copy-glide 440ms var(--ease-out) both; }
@@ -259,6 +251,46 @@ img { display:block; max-width:100%; }
 }
 @keyframes na-copy-reveal { from { opacity:0; transform:translate3d(0,18px,0); } to { opacity:1; transform:translate3d(0,0,0); } }
 @keyframes na-copy-glide { from { opacity:0; transform:translate3d(-14px,0,0); } to { opacity:1; transform:translate3d(0,0,0); } }
+
+/* Premium hero entrances: each page gets its own restrained motion signature —
+   opacity + movement + a whisper of blur/scale — while sharing one easing and
+   a heading -> paragraph -> CTA stagger. Remounting on route change (see
+   App.tsx's key={location}) replays these on every hero, including back-nav. */
+@media (prefers-reduced-motion: no-preference) {
+  /* Home: a confident vertical lift with a soft focus-pull. */
+  .home-hero__content .eyebrow { animation:hero-rise-blur 380ms var(--ease-out) both; }
+  .home-hero__content h1 { animation:hero-rise-blur 560ms var(--ease-out) 70ms both; }
+  .home-hero__content>p:not(.eyebrow) { animation:hero-rise-blur 480ms var(--ease-out) 150ms both; }
+  .home-hero__content .button { animation:hero-rise-blur 440ms var(--ease-out) 210ms both; }
+
+  /* Services (default page-hero variant): a precise horizontal glide. */
+  .page-hero:not(.page-hero--about):not(.page-hero--contact) .page-hero__content .eyebrow { animation:hero-glide-x 360ms var(--ease-out) both; }
+  .page-hero:not(.page-hero--about):not(.page-hero--contact) .page-hero__content h1 { animation:hero-glide-x 540ms var(--ease-out) 65ms both; }
+  .page-hero:not(.page-hero--about):not(.page-hero--contact) .page-hero__content>p:not(.eyebrow) { animation:hero-glide-x 460ms var(--ease-out) 145ms both; }
+  .page-hero:not(.page-hero--about):not(.page-hero--contact) .page-hero__content .button { animation:hero-glide-x 420ms var(--ease-out) 205ms both; }
+
+  /* About: a gentle zoom-settle, editorial and unhurried. */
+  .page-hero--about .page-hero__content .eyebrow { animation:hero-zoom-in 380ms var(--ease-out) both; }
+  .page-hero--about .page-hero__content h1 { animation:hero-zoom-in 560ms var(--ease-out) 70ms both; }
+  .page-hero--about .page-hero__content>p:not(.eyebrow) { animation:hero-zoom-in 480ms var(--ease-out) 150ms both; }
+  .page-hero--about .page-hero__content .button { animation:hero-zoom-in 440ms var(--ease-out) 210ms both; }
+
+  /* Contact: the softest arrival — a quiet, welcoming settle. */
+  .page-hero--contact .page-hero__content .eyebrow { animation:hero-settle 360ms var(--ease-out) both; }
+  .page-hero--contact .page-hero__content h1 { animation:hero-settle 540ms var(--ease-out) 65ms both; }
+  .page-hero--contact .page-hero__content>p:not(.eyebrow) { animation:hero-settle 460ms var(--ease-out) 145ms both; }
+  .page-hero--contact .page-hero__content .button { animation:hero-settle 420ms var(--ease-out) 205ms both; }
+
+  /* Projects: depth-forward, easing in from slightly larger — a gallery-opening feel. */
+  .projects-hero__copy .eyebrow { animation:hero-depth-in 380ms var(--ease-out) both; }
+  .projects-hero__copy h1 { animation:hero-depth-in 560ms var(--ease-out) 70ms both; }
+  .projects-hero__copy>p:not(.eyebrow) { animation:hero-depth-in 480ms var(--ease-out) 150ms both; }
+}
+@keyframes hero-rise-blur { from { opacity:0; transform:translate3d(0,22px,0) scale(1.01); filter:blur(6px); } to { opacity:1; transform:translate3d(0,0,0) scale(1); filter:blur(0); } }
+@keyframes hero-glide-x { from { opacity:0; transform:translate3d(-26px,0,0); filter:blur(4px); } to { opacity:1; transform:translate3d(0,0,0); filter:blur(0); } }
+@keyframes hero-zoom-in { from { opacity:0; transform:translate3d(0,14px,0) scale(.97); filter:blur(5px); } to { opacity:1; transform:translate3d(0,0,0) scale(1); filter:blur(0); } }
+@keyframes hero-settle { from { opacity:0; transform:translate3d(0,12px,0) scale(.985); filter:blur(3px); } to { opacity:1; transform:translate3d(0,0,0) scale(1); filter:blur(0); } }
+@keyframes hero-depth-in { from { opacity:0; transform:translate3d(0,18px,0) scale(1.035); filter:blur(6px); } to { opacity:1; transform:translate3d(0,0,0) scale(1); filter:blur(0); } }
 
 /* Streamlined footer after removing inactive newsletter and duplicate CTA utilities. */
 .footer-grid { grid-template-columns:1.4fr 1fr .78fr; }
@@ -283,7 +315,7 @@ img { display:block; max-width:100%; }
 
 /* Critical hero delivery: stable picture geometry. */
 .home-hero { background:#0b0d10; }.home-hero__media { position:absolute; inset:0; z-index:0; display:block; }.home-hero__media img { display:block; width:100%; height:100%; object-fit:cover; object-position:center; }.home-hero__shade { z-index:1; }.home-hero__content { z-index:2; }
-@media (prefers-reduced-motion:reduce) { .home-hero__content,.home-hero__content .eyebrow,.home-hero__content h1,.home-hero__content>p:not(.eyebrow),.page-hero__content *,.section-heading *,.gallery-heading *,.service-intro *,.home-statement *,.general-enquiry-card * { animation:none !important; transition:none !important; } }
+@media (prefers-reduced-motion:reduce) { .home-hero__content,.home-hero__content *,.page-hero__content *,.projects-hero__copy,.projects-hero__copy *,.section-heading *,.gallery-heading *,.service-intro *,.home-statement *,.general-enquiry-card * { animation:none !important; transition:none !important; } }
 
 /* Premium N A METAL logo lockup: true alpha-matted mark + wordmark, natural metal finish, no card/box, seamless on dark surfaces. */
 .header-inner { min-height:108px; }
