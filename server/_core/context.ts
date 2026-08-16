@@ -1,8 +1,8 @@
 import { parse as parseCookie } from "cookie";
 import type { IncomingMessage, ServerResponse } from "http";
-import { COOKIE_NAME } from "@shared/const";
-import * as db from "../db";
-import { verifySession } from "./session";
+import { COOKIE_NAME } from "../../shared/const.js";
+import * as db from "../db.js";
+import { verifySession } from "./session.js";
 import type { User } from "../../drizzle/schema";
 
 export interface TrpcContext {

@@ -1,6 +1,6 @@
 import { asc, desc, eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertContactMessage, InsertProject, InsertProjectImage, InsertUser, contactMessages, projectImages, projects, users } from "../drizzle/schema";
+import { InsertContactMessage, InsertProject, InsertProjectImage, InsertUser, contactMessages, projectImages, projects, users } from "../drizzle/schema.js";
 
 let _db: ReturnType<typeof drizzle> | null = null;
 

@@ -1,7 +1,7 @@
 import { serialize, type SerializeOptions } from "cookie";
 import type { ServerResponse } from "http";
-import { COOKIE_NAME, ONE_YEAR_MS } from "@shared/const";
-import { ENV } from "./env";
+import { COOKIE_NAME, ONE_YEAR_MS } from "../../shared/const.js";
+import { ENV } from "./env.js";
 
 export function getSessionCookieOptions(): SerializeOptions {
   return {

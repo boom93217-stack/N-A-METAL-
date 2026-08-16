@@ -1,5 +1,5 @@
 import { del, put } from "@vercel/blob";
-import { ENV } from "./_core/env";
+import { ENV } from "./_core/env.js";
 
 function normalizeKey(relKey: string): string {
   return relKey.replace(/^\/+/, "");

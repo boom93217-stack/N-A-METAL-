@@ -1,7 +1,7 @@
 import { SignJWT, jwtVerify } from "jose";
 import { createHash, timingSafeEqual } from "crypto";
-import { ONE_YEAR_MS } from "@shared/const";
-import { ENV } from "./env";
+import { ONE_YEAR_MS } from "../../shared/const.js";
+import { ENV } from "./env.js";
 
 /** The single admin account is identified by this constant instead of a real OAuth openId. */
 export const ADMIN_OPEN_ID = "admin";

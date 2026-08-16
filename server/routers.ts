@@ -1,13 +1,13 @@
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
-import * as db from "./db";
-import { clearSessionCookie, setSessionCookie } from "./_core/cookies";
-import { ADMIN_OPEN_ID, checkAdminCredentials, signSession } from "./_core/session";
-import { systemRouter } from "./_core/systemRouter";
-import { adminProcedure, publicProcedure, router } from "./_core/trpc";
-import { cleanFilename, parseImageDataUrl, slugifyProjectTitle } from "./projectUtils";
-import { storageDelete, storagePut } from "./storage";
-import { contactMessageSchema } from "./contactUtils";
+import * as db from "./db.js";
+import { clearSessionCookie, setSessionCookie } from "./_core/cookies.js";
+import { ADMIN_OPEN_ID, checkAdminCredentials, signSession } from "./_core/session.js";
+import { systemRouter } from "./_core/systemRouter.js";
+import { adminProcedure, publicProcedure, router } from "./_core/trpc.js";
+import { cleanFilename, parseImageDataUrl, slugifyProjectTitle } from "./projectUtils.js";
+import { storageDelete, storagePut } from "./storage.js";
+import { contactMessageSchema } from "./contactUtils.js";
 
 const projectInput = z.object({
   title: z.string().trim().min(3).max(180),
