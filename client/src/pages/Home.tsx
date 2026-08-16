@@ -7,7 +7,7 @@ import { Link } from "wouter";
 import { SiteLayout } from "@/components/SiteShell";
 import { trpc } from "@/lib/trpc";
 
-const heroPremium = "/images/page-hero-stage.jpg";
+const heroPremium = "/images/home-event-stage-new.png";
 const heroPremiumMobile = "/images/gala-entry.webp";
 const gala = "/images/gala-entry.webp";
 const exhibition = "/images/exhibition.webp";

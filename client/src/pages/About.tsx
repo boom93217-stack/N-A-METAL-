@@ -10,24 +10,24 @@ const aboutVisual = "/images/about-workshop.webp";
 export default function About() {
   return (
     <SiteLayout>
-      <PageHero variant="about" eyebrow="ABOUT N A METAL" title="Thoughtful building, made practical." />
+      <PageHero variant="about" eyebrow="ABOUT N A METAL" title="Built for the brief, made practical." />
       <section className="shell split-section split-section--about">
         <div className="visual-panel"><img src={aboutVisual} alt="Metal fabrication professional preparing a precision steel component in a workshop" loading="lazy" decoding="async" /></div>
         <div className="prose-column">
           <p className="eyebrow">WELCOME TO N A METAL</p>
-          <h2>Your construction partner for well-made spaces.</h2>
-          <p>N A METAL brings construction, renovation, fabrication and fit-out work together under one clear project approach. We turn ideas into spaces that are practical, durable and made with real attention to detail.</p>
-          <p>From a focused interior upgrade to a more complex new build, we connect considered planning with capable craft so the work remains grounded from start to finish.</p>
+          <h2>Your event fabrication partner.</h2>
+          <p>N A METAL brings fabrication, event structures, exhibitions, and activations together under one clear project approach. We turn ideas into practical, durable environments with real attention to detail.</p>
+          <p>From a branded entry feature to a full event environment, we connect considered planning with capable craft so the experience is ready from workshop to site.</p>
         </div>
       </section>
       <section className="principles-section">
         <div className="shell">
           <p className="eyebrow eyebrow--gold">HOW WE WORK</p>
-          <h2>Blending planning, craft, and delivery.</h2>
+          <h2>Clear planning. Strong fabrication. Reliable delivery.</h2>
           <div className="principles-grid">
-            <article><Lightbulb size={24} /><h3>Build clarity</h3><p>We sharpen the brief into a build-ready plan, from early scope through to the right material choices.</p></article>
-            <article><Hammer size={24} /><h3>Built detail</h3><p>Practical construction thinking makes every finish, structure, and installation purposeful and sound.</p></article>
-            <article><ShieldCheck size={24} /><h3>Reliable delivery</h3><p>Clear organisation and on-site coordination keep the work moving when it matters most.</p></article>
+            <article><Lightbulb size={24} /><h3>Shape the brief</h3><p>We turn the event brief into a build-ready plan, from scope and material choices to the right fabrication approach.</p></article>
+            <article><Hammer size={24} /><h3>Build the detail</h3><p>Practical fabrication thinking makes every finish, structure, and installation purposeful and ready for the event.</p></article>
+            <article><ShieldCheck size={24} /><h3>Reliable delivery</h3><p>Clear organisation and on-site coordination keep fabrication and installation moving when it matters most.</p></article>
           </div>
         </div>
       </section>

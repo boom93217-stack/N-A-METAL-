@@ -25,7 +25,7 @@ export default function Services() {
       <section className="shell service-intro">
         <div className="service-intro__copy">
           <p className="eyebrow">N A METAL SERVICES</p>
-          <h2>End-to-end fabrication for events, exhibitions, activations, retail displays, and custom interiors.</h2>
+          <h2>Fabrication for events, exhibitions, activations, and display environments.</h2>
         </div>
         <figure className="service-intro__visual">
           <img src={fabricationVisual} alt="Precision steel fabrication and welding in a professional workshop" loading="lazy" decoding="async" />
