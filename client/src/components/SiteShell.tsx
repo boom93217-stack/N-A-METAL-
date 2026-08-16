@@ -37,7 +37,7 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="header-inner">
-        <BrandMark inverted tagline={location === "/"} />
+        <BrandMark inverted tagline />
         <nav className="desktop-nav" aria-label="Primary navigation">
           {navigation.map((item) => (
             <Link key={item.href} href={item.href} className={location === item.href ? "is-active" : ""}>

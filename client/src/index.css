@@ -110,7 +110,7 @@ img { display:block; max-width:100%; }
 .text-button--light { color:white; }
 
 /* Header */
-.site-header { position:absolute; z-index:20; top:0; left:0; right:0; color:white; border-bottom:1px solid rgba(255,255,255,.14); }
+.site-header { position:absolute; z-index:20; top:0; left:0; right:0; color:white; }
 .header-inner { width:var(--shell); min-height:86px; margin:0 auto; display:flex; align-items:center; gap:28px; }
 .brand-mark { display:inline-flex; align-items:center; gap:11px; flex-shrink:0; }
 .brand-mark img { width:218px; height:auto; object-fit:contain; object-position:left center; }
