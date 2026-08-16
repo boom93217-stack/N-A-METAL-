@@ -6,6 +6,7 @@ import { appRouter } from "../../server/routers.js";
 const handler = createHTTPHandler({
   router: appRouter,
   createContext,
+  basePath: "/api/trpc/",
 });
 
 export default function trpcHandler(req: IncomingMessage, res: ServerResponse) {
