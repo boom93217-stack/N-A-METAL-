@@ -22,8 +22,8 @@ function BrandMark({ inverted = false, footer = false, tagline = false }: { inve
   return (
     <Link href="/" className={`brand-mark ${inverted ? "brand-mark--inverted" : ""} ${footer ? "brand-mark--footer" : ""}`} aria-label="N A METAL home">
       <span className="brand-mark__lockup">
-        <img className="brand-mark__icon" src={LOGO_MARK} alt="" aria-hidden="true" />
-        <img className="brand-mark__word" src={LOGO_WORD} alt="N A METAL" />
+        <img className="brand-mark__icon" src={LOGO_MARK} alt="" aria-hidden="true" width="952" height="840" decoding="async" fetchPriority="high" />
+        <img className="brand-mark__word" src={LOGO_WORD} alt="N A METAL" width="1449" height="215" decoding="async" fetchPriority="high" />
       </span>
       {tagline && <span className="brand-mark__tagline" aria-hidden="true">WE BUILD WHAT YOU IMAGINE</span>}
     </Link>

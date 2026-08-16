@@ -12,7 +12,7 @@ export default function About() {
     <SiteLayout>
       <PageHero variant="about" eyebrow="ABOUT N A METAL" title="Thoughtful building, made practical." />
       <section className="shell split-section split-section--about">
-        <div className="visual-panel"><img src={aboutVisual} alt="Metal fabrication professional preparing a precision steel component in a workshop" /></div>
+        <div className="visual-panel"><img src={aboutVisual} alt="Metal fabrication professional preparing a precision steel component in a workshop" loading="lazy" decoding="async" /></div>
         <div className="prose-column">
           <p className="eyebrow">WELCOME TO N A METAL</p>
           <h2>Your construction partner for well-made spaces.</h2>

@@ -28,7 +28,7 @@ export default function Services() {
           <h2>End-to-end fabrication for events, exhibitions, activations, retail displays, and custom interiors.</h2>
         </div>
         <figure className="service-intro__visual">
-          <img src={fabricationVisual} alt="Precision steel fabrication and welding in a professional workshop" />
+          <img src={fabricationVisual} alt="Precision steel fabrication and welding in a professional workshop" loading="lazy" decoding="async" />
           <figcaption>Event &amp; Exhibition Fabrication</figcaption>
         </figure>
       </section>
